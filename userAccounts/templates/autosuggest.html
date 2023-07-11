@@ -1,0 +1,41 @@
+<!-- autosuggest.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autosuggest Results</title>
+</head>
+<body>
+    <a href="{% url 'logout' %}">Logout</a>
+    <h1>Description</h1>
+    
+    <h2>City Results</h2>
+    <ul>
+        {% for city in cities %}
+            <li>{{ city.name }}</li>
+            <!-- Display other city details as needed -->
+        {% empty %}
+            <li>No cities found</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Country Results</h2>
+    <ul>
+        {% for country in countries %}
+            <li>{{ country.name }}</li>
+            <!-- Display other country details as needed -->
+        {% empty %}
+            <li>No countries found</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Language Results</h2>
+    <ul>
+        {% for language in languages %}
+            <li>{{ language.language }}</li>
+            <!-- Display other language details as needed -->
+        {% empty %}
+            <li>No languages found</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!-- search.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    <a href="{% url 'logout' %}">Logout</a>
+    <h1>Search</h1>
+    
+    <form action="{% url 'autosuggest' %}" method="GET">
+        <input type="text" name="query" placeholder="Enter your query" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
